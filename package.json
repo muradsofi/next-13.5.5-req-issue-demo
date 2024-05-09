@@ -1,0 +1,39 @@
+{
+	"name": "platform-frontend",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint --parallel",
+		"lint:fix": "turbo run lint:fix --parallel",
+		"format": "prettier --check \"**/*.{js,ts,jsx,tsx}\"",
+		"format:fix": "prettier --write \"**/*.{js,ts,jsx,tsx}\"",
+		"type:check": "turbo run type:check",
+		"prepare": "husky install",
+		"test": "turbo test"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^14.0.0",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@testing-library/user-event": "^14.5.1",
+		"@types/jest": "^29.5.7",
+		"esbuild": "^0.17.19",
+		"esbuild-jest": "^0.5.0",
+		"husky": "^8.0.3",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=16.8.0"
+	},
+	"packageManager": "pnpm@7.29.0"
+}

@@ -1,0 +1,7 @@
+.husky/
+.next/
+.yarn/
+node_modules/
+public/
+.yarnrc.yml
+yarn.lock
